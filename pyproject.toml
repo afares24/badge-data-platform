@@ -1,0 +1,18 @@
+[project]
+name = "badge-data-platform"
+version = "0.1.0"
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+pythonVersion = "3.13"
+extraPaths = ["."]
+typeCheckingMode = "off"
+
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
