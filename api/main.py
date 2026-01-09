@@ -1,8 +1,7 @@
 from fastapi import FastAPI
 
-from api.generators import DataGenerators
+from api.generators import gen_employee_badge_logs
 
-# entry point
 app = FastAPI()
 
 
@@ -14,7 +13,7 @@ def home():
 
 @app.get("/employee-badge-logs/")
 def employee_badge_logs(batch: int = 100):
-    return DataGenerators().gen_employee_badge_logs(batch_size=batch)
+    return gen_employee_badge_logs(batch_size=batch)
 
 
 @app.get("/health/")
